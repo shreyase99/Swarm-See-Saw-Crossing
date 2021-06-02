@@ -1,0 +1,37 @@
+ <link name="new_p">
+      <origin
+        xyz="1.38777878078145E-15 .0299999999999999 0.300000000000009"
+        rpy="0 0 1.5708" />
+      <mass
+        value="216" />
+      <inertia
+        ixx="6.54479999999999"
+        ixy="-6.86339873823272E-13"
+        ixz="1.89428638578259E-12"
+        iyy="654.479999999999"
+        iyz="5.01917770841E-16"
+        izz="648.064799999999" />
+    <collision>
+        <geometry>
+            <box size=".001 6 .7"/>
+        </geometry>    
+        
+    </collision>
+    <visual>
+        <geometry>
+            <box size=".001 6 .7"/>
+        </geometry>
+        <material name="blue"/>
+    </visual>
+    
+    </link>
+      <joint name="grouding2" type="fixed">
+        <origin
+      xyz="1.38777878078145E-15 0 0.300000000000009"
+        rpy="0 0 1.5708" />
+    <parent link="plank"/>
+    <child link="new_p"/>
+  </joint>
+    <gazebo reference="new_p">
+    <material>Gazebo/Green</material>
+  </gazebo>

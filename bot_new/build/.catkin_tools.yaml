@@ -1,0 +1,6 @@
+devel_space: /home/pranav/repository.2/bot_new/devel
+install: false
+install_space: /home/pranav/repository.2/bot_new/install
+profile: default
+source_space: /home/pranav/repository.2/bot_new/src
+workspace: /home/pranav/repository.2/bot_new

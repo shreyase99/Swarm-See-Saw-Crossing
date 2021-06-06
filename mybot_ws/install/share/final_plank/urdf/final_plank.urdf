@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="final_plank">
+  <link
+    name="prism">
+    <inertial>
+      <origin
+        xyz="0.273547454868685 0.215840736668064 0.441635509533608"
+        rpy="0 0 0" />
+      <mass
+        value="100" />
+      <inertia
+        ixx="4.20888346239235"
+        ixy="-5.62812561082257E-15"
+        ixz="1.58743381048034E-18"
+        iyy="4.20888346239236"
+        iyz="-2.6679716546464E-16"
+        izz="2.80592230826157" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://final_plank/meshes/prism.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://final_plank/meshes/prism.STL" />
+      </geometry>
+    </collision>
+  </link>
+<gazebo reference="prism">
+	<static>true</static>
+</gazebo>
+  <link
+    name="plank">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-15 0.0299999999999999 0.300000000000009"
+        rpy="0 0 0" />
+      <mass
+        value="216" />
+      <inertia
+        ixx="6.54479999999999"
+        ixy="-6.86339873823272E-13"
+        ixz="1.89428638578259E-12"
+        iyy="654.479999999999"
+        iyz="5.01917770841E-16"
+        izz="648.064799999999" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="1.5708 0 0" />
+      <geometry>
+        <mesh
+          filename="package://final_plank/meshes/plank.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://final_plank/meshes/plank.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rotate_1"
+    type="continuous">
+    <origin
+      xyz="0.27355 -0.14164 0.56225"
+       />
+    <parent
+      link="prism" />
+    <child
+      link="plank" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="100"
+      velocity="10000" />
+  </joint>
+    <link name="world"/>
+
+  <joint name="grouding" type="fixed">
+    <parent link="world"/>
+    <child link="prism"/>
+  </joint>
+
+</robot>

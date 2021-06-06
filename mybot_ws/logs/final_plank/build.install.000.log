@@ -1,0 +1,26 @@
+[36mInstall the project...[0m
+-- Install configuration: ""
+-- Installing: /home/pranav/repository.2/mybot_ws/install/_setup_util.py
+-- Installing: /home/pranav/repository.2/mybot_ws/install/env.sh
+-- Installing: /home/pranav/repository.2/mybot_ws/install/setup.bash
+-- Installing: /home/pranav/repository.2/mybot_ws/install/local_setup.bash
+-- Installing: /home/pranav/repository.2/mybot_ws/install/setup.sh
+-- Installing: /home/pranav/repository.2/mybot_ws/install/local_setup.sh
+-- Installing: /home/pranav/repository.2/mybot_ws/install/setup.zsh
+-- Installing: /home/pranav/repository.2/mybot_ws/install/local_setup.zsh
+-- Installing: /home/pranav/repository.2/mybot_ws/install/.rosinstall
+-- Installing: /home/pranav/repository.2/mybot_ws/install/lib/pkgconfig/final_plank.pc
+-- Installing: /home/pranav/repository.2/mybot_ws/install/share/final_plank/cmake/final_plankConfig.cmake
+-- Installing: /home/pranav/repository.2/mybot_ws/install/share/final_plank/cmake/final_plankConfig-version.cmake
+-- Installing: /home/pranav/repository.2/mybot_ws/install/share/final_plank/package.xml
+-- Installing: /home/pranav/repository.2/mybot_ws/install/share/final_plank/config
+-- Installing: /home/pranav/repository.2/mybot_ws/install/share/final_plank/config/joint_names_final_plank.yaml
+-- Installing: /home/pranav/repository.2/mybot_ws/install/share/final_plank/launch
+-- Installing: /home/pranav/repository.2/mybot_ws/install/share/final_plank/launch/display.launch
+-- Installing: /home/pranav/repository.2/mybot_ws/install/share/final_plank/launch/gazebo.launch
+-- Installing: /home/pranav/repository.2/mybot_ws/install/share/final_plank/meshes
+-- Installing: /home/pranav/repository.2/mybot_ws/install/share/final_plank/meshes/prism.STL
+-- Installing: /home/pranav/repository.2/mybot_ws/install/share/final_plank/meshes/plank.STL
+-- Installing: /home/pranav/repository.2/mybot_ws/install/share/final_plank/urdf
+-- Installing: /home/pranav/repository.2/mybot_ws/install/share/final_plank/urdf/final_plank.csv
+-- Installing: /home/pranav/repository.2/mybot_ws/install/share/final_plank/urdf/final_plank.urdf

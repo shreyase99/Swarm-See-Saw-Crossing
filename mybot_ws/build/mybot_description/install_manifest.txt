@@ -1,0 +1,13 @@
+/home/pranav/repository.2/mybot_ws/install/_setup_util.py
+/home/pranav/repository.2/mybot_ws/install/env.sh
+/home/pranav/repository.2/mybot_ws/install/setup.bash
+/home/pranav/repository.2/mybot_ws/install/local_setup.bash
+/home/pranav/repository.2/mybot_ws/install/setup.sh
+/home/pranav/repository.2/mybot_ws/install/local_setup.sh
+/home/pranav/repository.2/mybot_ws/install/setup.zsh
+/home/pranav/repository.2/mybot_ws/install/local_setup.zsh
+/home/pranav/repository.2/mybot_ws/install/.rosinstall
+/home/pranav/repository.2/mybot_ws/install/lib/pkgconfig/mybot_description.pc
+/home/pranav/repository.2/mybot_ws/install/share/mybot_description/cmake/mybot_descriptionConfig.cmake
+/home/pranav/repository.2/mybot_ws/install/share/mybot_description/cmake/mybot_descriptionConfig-version.cmake
+/home/pranav/repository.2/mybot_ws/install/share/mybot_description/package.xml

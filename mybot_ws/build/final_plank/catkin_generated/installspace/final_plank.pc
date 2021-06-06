@@ -1,0 +1,8 @@
+prefix=/home/pranav/repository.2/mybot_ws/install
+
+Name: final_plank
+Description: Description of final_plank
+Version: 1.0.0
+Cflags: 
+Libs: -L/home/pranav/repository.2/mybot_ws/install/lib 
+Requires: 

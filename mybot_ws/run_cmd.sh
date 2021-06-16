@@ -7,7 +7,7 @@ rostopic pub -1 /cmd_vel geometry_msgs/Twist "linear:
 angular:
   x: 0.0
   y: 0.0
-  z: 0.0" 
+  z: 0.0"
 
 
 roslaunch mybot_description newlaunch

@@ -2,14 +2,16 @@
 
 <robot name="myrobot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
+  <xacro:arg name="id" default="1" />
+  <xacro:include filename="$(find mybot_description)/urdf/mybot.gazebo"/>
+  <idbridge id="$(arg id)"/> 
 
 
-  <xacro:include filename="$(find mybot_description)/urdf/mybot.gazebo" />
   <xacro:include filename="$(find mybot_description)/urdf/materials.xacro" />
   <xacro:include filename="$(find mybot_description)/urdf/macros.xacro" />
 
 
-  <link name='chassis'>
+  <link name='chassis$(arg id)'>
     <pose>0 0 0.1 0 0 0</pose>
 
     <inertial>
@@ -22,13 +24,13 @@
       />
     </inertial>
 
-    <collision name='collision'>
+    <collision name='collision$(arg id)'>
       <geometry>
         <box size=".4 .2 .1"/>
       </geometry>
     </collision>
 
-    <visual name='chassis_visual'>
+    <visual name='chassis_visual$(arg id)'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
         <mesh filename="$(find mybot_description)/urdf/chassis.dae" scale="0.9 0.8 0.5"/>
@@ -41,9 +43,9 @@
   </link>
 
 
-  <link name="left_wheel">
+  <link name="left_wheel$(arg id)">
     <!--origin xyz="0.1 0.13 0.1" rpy="0 1.5707 1.5707"/-->
-    <collision name="collision">
+    <collision name="collision$(arg id)">
       <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
         <cylinder radius="0.1" length="0.05"/>
@@ -57,7 +59,7 @@
         </friction>
       </surface>
     </collision>
-    <visual name="left_wheel_visual">
+    <visual name="left_wheel_visual$(arg id)">
       <origin xyz="0 0 0" rpy="0 1.0 0"/>
       <geometry>
         <mesh filename="$(find mybot_description)/urdf/wheel.dae"/>
@@ -73,9 +75,9 @@
         izz="1.0"/>
     </inertial>
   </link>
-<link name="left_wheel_back">
+<link name="left_wheel_back$(arg id)">
     <!--origin xyz="0.1 0.13 0.1" rpy="0 1.5707 1.5707"/-->
-    <collision name="collision">
+    <collision name="collision$(arg id)">
       <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
         <cylinder radius="0.1" length="0.05"/>
@@ -89,7 +91,7 @@
         </friction>
       </surface>
     </collision>
-    <visual name="left_wheel_visual">
+    <visual name="left_wheel_visual$(arg id)">
       <origin xyz="0 0 0" rpy="0 1.0 0"/>
       <geometry>
         <mesh filename="$(find mybot_description)/urdf/wheel.dae"/>
@@ -105,9 +107,9 @@
         izz="1.0"/>
     </inertial>
   </link>
-  <link name="right_wheel">
+  <link name="right_wheel$(arg id)">
     <!--origin xyz="0.1 -0.13 0.1" rpy="0 1.5707 1.5707"/-->
-    <collision name="collision">
+    <collision name="collision$(arg id)">
       <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
         <cylinder radius="0.1" length="0.05"/>
@@ -121,7 +123,7 @@
         </friction>
       </surface>
     </collision>
-    <visual name="right_wheel_visual">
+    <visual name="right_wheel_visual$(arg id)">
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="$(find mybot_description)/urdf/wheel.dae"/>
@@ -137,9 +139,9 @@
         izz="1.0"/>
     </inertial>
   </link>
-<link name="right_wheel_back">
+<link name="right_wheel_back$(arg id)">
     <!--origin xyz="0.1 -0.13 0.1" rpy="0 1.5707 1.5707"/-->
-    <collision name="collision">
+    <collision name="collision$(arg id)">
       <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
         <cylinder radius="0.1" length="0.05"/>
@@ -153,7 +155,7 @@
         </friction>
       </surface>
     </collision>
-    <visual name="right_wheel_visual">
+    <visual name="right_wheel_visual$(arg id)">
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <mesh filename="$(find mybot_description)/urdf/wheel.dae"/>
@@ -170,40 +172,38 @@
     </inertial>
   </link>
 
-  <joint type="continuous" name="left_wheel_hinge">
+  <joint type="continuous" name="left_wheel_hinge$(arg id)">
     <origin xyz="0.1 0.151 0" rpy="0 0 0"/>
-    <child link="left_wheel"/>
-    <parent link="chassis"/>
+    <child link="left_wheel$(arg id)"/>
+    <parent link="chassis$(arg id)"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="100" velocity="100"/>
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>
 
-  <joint type="continuous" name="right_wheel_hinge">
+  <joint type="continuous" name="right_wheel_hinge$(arg id)">
     <origin xyz="0.1 -0.151 0" rpy="0 0 0"/>
-    <child link="right_wheel"/>
-    <parent link="chassis"/>
+    <child link="right_wheel$(arg id)"/>
+    <parent link="chassis$(arg id)"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="100" velocity="100"/>
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>
-  <joint type="continuous" name="left_wheel_hinge_b">
+  <joint type="continuous" name="left_wheel_hinge_b$(arg id)">
     <origin xyz="-0.15 0.151 0" rpy="0 0 0"/>
-    <child link="left_wheel_back"/>
-    <parent link="chassis"/>
+    <child link="left_wheel_back$(arg id)"/>
+    <parent link="chassis$(arg id)"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="100" velocity="100"/>
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>
-  <joint type="continuous" name="right_wheel_hinge_b">
+  <joint type="continuous" name="right_wheel_hinge_b$(arg id)">
     <origin xyz="-0.15 -0.151 0" rpy="0 0 0"/>
-    <child link="right_wheel_back"/>
-    <parent link="chassis"/>
+    <child link="right_wheel_back$(arg id)"/>
+    <parent link="chassis$(arg id)"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
     <limit effort="100" velocity="100"/>
     <joint_properties damping="0.0" friction="0.0"/>
   </joint>
-
-
 
 </robot>

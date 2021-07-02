@@ -1,8 +1,8 @@
-prefix=/home/pranav/repository.2/bot_new/devel/.private/mybot_description
+prefix=/home/shreyase/Desktop/Swarm-See-Saw-Crossing/bot_new/devel/.private/mybot_description
 
 Name: mybot_description
 Description: Description of mybot_description
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/pranav/repository.2/bot_new/devel/.private/mybot_description/lib 
+Libs: -L${prefix}/lib 
 Requires: 

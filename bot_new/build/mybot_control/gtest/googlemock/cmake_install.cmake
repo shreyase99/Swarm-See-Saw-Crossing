@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/pranav/repository.2/bot_new/install")
+  set(CMAKE_INSTALL_PREFIX "/home/shreyase/Desktop/Swarm-See-Saw-Crossing/bot_new/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/pranav/repository.2/bot_new/build/mybot_control/gtest/googlemock/gtest/cmake_install.cmake")
+  include("/home/shreyase/Desktop/Swarm-See-Saw-Crossing/bot_new/build/mybot_control/gtest/googletest/cmake_install.cmake")
 
 endif()
 

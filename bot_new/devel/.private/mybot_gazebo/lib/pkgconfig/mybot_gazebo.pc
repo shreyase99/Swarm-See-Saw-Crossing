@@ -1,8 +1,8 @@
-prefix=/home/pranav/repository.2/bot_new/devel/.private/mybot_gazebo
+prefix=/home/shreyase/Desktop/Swarm-See-Saw-Crossing/bot_new/devel/.private/mybot_gazebo
 
 Name: mybot_gazebo
 Description: Description of mybot_gazebo
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/pranav/repository.2/bot_new/devel/.private/mybot_gazebo/lib 
+Libs: -L${prefix}/lib 
 Requires: 

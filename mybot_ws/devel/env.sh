@@ -1,1 +1,0 @@
-/home/pranav/repository.2/mybot_ws/devel/.private/catkin_tools_prebuild/env.sh

@@ -1,5 +1,0 @@
-mybot_gazebo
-/home/pranav/repository.2/mybot_ws/devel/.private/mybot_gazebo/cmake.lock /home/pranav/repository.2/mybot_ws/devel/./cmake.lock
-/home/pranav/repository.2/mybot_ws/devel/.private/mybot_gazebo/share/mybot_gazebo/cmake/mybot_gazeboConfig.cmake /home/pranav/repository.2/mybot_ws/devel/share/mybot_gazebo/cmake/mybot_gazeboConfig.cmake
-/home/pranav/repository.2/mybot_ws/devel/.private/mybot_gazebo/share/mybot_gazebo/cmake/mybot_gazeboConfig-version.cmake /home/pranav/repository.2/mybot_ws/devel/share/mybot_gazebo/cmake/mybot_gazeboConfig-version.cmake
-/home/pranav/repository.2/mybot_ws/devel/.private/mybot_gazebo/lib/pkgconfig/mybot_gazebo.pc /home/pranav/repository.2/mybot_ws/devel/lib/pkgconfig/mybot_gazebo.pc
